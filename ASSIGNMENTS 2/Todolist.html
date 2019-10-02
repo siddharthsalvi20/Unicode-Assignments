@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<title>Carousel</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">  
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">   
+
+<style>    
+    <style>
+        
+         .make{
+            
+            background-color:rgba(248, 248, 178, 0.7);
+            width:50%;
+            margin-left: 20px;
+            border-radius: 20px;
+            display: block;
+            box-shadow: 10px 10px 5px grey;
+            border-color: aliceblue;
+            border-style: ridge;
+            padding-left: 5px;
+            padding-right=5px;
+            
+            
+            
+            
+        
+        
+    
+            
+            
+        }
+        #name{
+            
+            color:#09edd3;
+           
+           
+            font-weight:bold;
+          
+    
+            
+        }
+        .no{
+            
+            font-weight:bold;
+            font-size:20px;
+            color:blueviolet;
+        }
+         .head{
+        
+        background-color: hsla(69, 66%, 80%, 0.92);
+        height:60px;
+        color:aliceblue
+    }
+        .center{
+            
+            display:block;
+            margin-left:auto;
+                margin-right: auto;
+            width:20%;
+        }
+        .head1{
+            
+            color:white;
+            
+                
+        }
+        .back{
+            background-image: url(Images/bulb.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+            width:auto;
+            
+        }
+        .back2{
+            background-image: linear-gradient(0deg,#f4f489,#b4f7b4);
+            background-repeat: no-repeat;
+            background-size:cover;
+            width:auto;
+        }
+
+        #dob{
+              
+            font-weight:bold;
+            font-size:20px;
+            color:blueviolet; 
+        }
+        #mail{
+               
+            font-weight:bold;
+            font-size:20px;
+            color:blueviolet;
+            border-color: brown;
+            background-color:#b6f479;}
+        #sap{
+               
+            font-weight:bold;
+            font-size:20px;
+            color:blueviolet;
+              background-color:#b6f479;
+        }
+        .personal{
+            color:white;
+            margin-left: 20px;
+            
+        }
+        #numout{
+            font-weight:bold;
+            font-size:20px;
+            color:blueviolet; 
+             background-color:#b6f479;
+       
+        }
+        #college{
+             font-weight:bold;
+            font-size:20px;
+            color:blueviolet;
+              background-color:#b6f479;
+        }
+        
+        .prog{
+            color:white;
+            text-decoration: underline;
+            font-weight:bold;
+        }
+        .thead1{
+            background-color: #e6f479;
+            color:blueviolet;
+                
+        }
+        #dob{
+             font-weight:bold;
+            font-size:20px;
+            color:blueviolet; 
+             background-color:#b6f479;
+        }
+        #nameout{
+             font-weight:bold;
+            font-size:20px;
+            color:blueviolet;
+              background-color:#b6f479;
+        }
+        #mailout{
+             font-weight:bold;
+            font-size:20px;
+            color:blueviolet;
+              background-color:#b6f479;
+        }
+        #pa1{
+             font-weight:bold;
+            font-size:20px;
+            color:blueviolet;
+              background-color:#b6f479;
+        }
+    .bod{
+        padding-left: 30px;
+    }
+    </style>
+    
+</head>
+    <body>
+    <div class="container-fluid">
+        <h1 class=" head text-info"><strong>todolist.com</strong></h1>
+    
+    <div class="carousel slide" id="myCarousel" data-interval="false">
+
+<div class="carousel-inner">
+<div class="carousel-item active">
+
+    <div class="carousel-text">
+   <div class="back">    
+     <h2 class=" head1"><strong><u>Create The Todo List Here</u></strong></h2>
+    
+    
+       <br />
+       
+    <div class="bod">   
+    <h3  id="name" class="text-info">Item 1: </h3>
+    <h4 class="input1"><input placeholder="Enter The Item" class="item" type="text"  ></h4>
+       <br />
+     <h3  id="age" class="text-info">Item 2:</h3>
+    <h4 ><input placeholder="Enter The Item" class="item" type="text"  ></h4>
+       <br />
+        
+       <h3 class="text-info">Item 3: </h3>
+       <h4><input placeholder="Enter The Item" class="item" type="text"  ></h4>
+       <br />
+       
+       <p id="b1"> <button id="create" class="btn btn-success" onclick="createList(this.value)">Create The List Here</button></p>
+       <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+    <span class="btn btn-success" >VIEW TODO LIST</span>
+    </a>
+    </div>
+    <br />
+    <br />
+    <br />    
+        </div>
+    
+    
+    </div>    
+</div>
+<div class="carousel-item">
+<div class="back2">
+<h2 class="personal"><u>My Todo List:</u></h2>         
+    <div class="make" id="make">    
+   
+   <button onclick="displayarr()" class="btn btn-success">Display The Array</button>
+        
+     <p id="l2"></p> 
+   
+        <p id="m1"></p>
+        <p id="b2"></p>   
+        <h4 class="text-warning" id="arr"></h4>
+        <p id="p8"><button id="add" class="btn btn-primary" onclick="additem()">Add One Item</button></p>
+        
+        <p id="p3"></p>
+        <p id="p4"></p>
+        <p id="p5"></p>
+        <p id="p6"><button id="add" class="btn btn-danger" onclick="sid3()">Delete Item</button></p>
+        <p id="p7"></p>
+        <p id="dir"></p>
+    
+        </div>
+    
+</div>    
+</div>
+
+    
+</div>    
+    
+        
+    </div>
+        
+   
+    <script>
+        var itemArray=[];  
+    function createList(item)
+        {
+            
+                
+                    var elem=document.getElementsByClassName("item");
+             
+            for(var k=0;k<elem.length;k++)
+            {
+        
+                
+                    
+                    itemArray.push(elem[k].value);
+                    }
+                
+        
+              
+               
+                
+                     
+                    
+                
+            
+             
+        }
+        
+    function additem()
+        {
+            
+            document.getElementById("p3").innerHTML="<input type='text' id='new' placeholder='Enter The Item'>"
+            document.getElementById("p8").innerHTML="<button id='b3' onclick='sid2()' class='btn btn-success'>Add The Item</button>"
+            
+            
+        }
+        function sid2()
+        {
+            var n=document.getElementById("new").value;
+            itemArray.push(n);
+            var res=itemArray.join("<br><input type='checkbox'/>");
+                     document.getElementById("arr").innerHTML=("<br><input type='checkbox'/>"+res);
+        
+        }
+        function displayarr()
+        {
+          var res=itemArray.join("<br><input type='checkbox'/>");
+                     document.getElementById("arr").innerHTML=("<br><input type='checkbox'/>"+res);
+           
+        }
+        function sid3()
+        {
+            document.getElementById("p3").innerHTML="<input type='text' id='i1' placeholder='Enter The Item'/>"
+       
+        document.getElementById("p7").innerHTML="<button id='b5' onclick='sid5()' class='btn btn-danger'>Delete It</button>"
+        }
+        function sid5()
+        {
+         var m=document.getElementById("i1").value;
+            for(i=0;i<itemArray.length;i++)
+                {
+                    if(itemArray[i]==m)
+                        {
+                        itemArray.splice(i,1);
+                            break;
+                        }
+                    
+                }
+            var res=itemArray.join("<br><input type='checkbox'/>");
+                     document.getElementById("arr").innerHTML=("<br><input type='checkbox'/>"+res);
+        }
+        
+        
+        </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+        </div>
+        </body>
+        
+</html>
