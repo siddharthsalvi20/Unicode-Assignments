@@ -1,8 +1,9 @@
 import React,{Component} from 'react';
 import './Components/mystyles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Form1 from './Components/MyInfo.js';
 
-import Home from './Components/homepage.js';
+/*import Home from './Components/homepage.js';
 import Converter from './Components/Task1.js';
 import LoginForm from './Components/Week2Task2.js';
 import Zomato from './Components/zomatoapi.js';
@@ -22,9 +23,24 @@ const Homepage=()=>{
         
     </div>      
         
-    </Router>    
+    </Router>*/
+class App extends Component{
     
-    );
+        
+    render(){
+        
+        
+        return(
+        <div className="App">
+            
+        <Form1></Form1> 
+        </div>
+
+        
+        );
+    }
 }
 
-export default Homepage;
+export default App;
+
+   
